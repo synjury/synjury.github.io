@@ -100,6 +100,11 @@
             We're talking to teams building on agent-payment rails (x402, AP2, agent escrow).
           </p>
           <p class="muted">Working title · stealth · more soon.</p>
+          <p class="contact">
+            Get in touch:
+            <a id="contact-email" href="#" data-u="synjury" data-d="pm.me">enable JavaScript to view</a>
+            <noscript>synjury <span aria-hidden="true">[at]</span> pm <span aria-hidden="true">[dot]</span> me</noscript>
+          </p>
         </div>
       </section>
     </main>
@@ -110,5 +115,17 @@
         <span class="muted">© 2026 Synjury. All rights reserved.</span>
       </div>
     </footer>
+
+    <script>
+      // Assemble the address at runtime from parts so the literal string never appears in the
+      // static HTML (defeats naive email scrapers). Progressive enhancement: noscript fallback above.
+      (function () {
+        var el = document.getElementById("contact-email");
+        if (!el) return;
+        var addr = el.getAttribute("data-u") + "@" + el.getAttribute("data-d");
+        el.href = "mailto:" + addr;
+        el.textContent = addr;
+      })();
+    </script>
   </body>
 </html>

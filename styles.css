@@ -90,6 +90,9 @@ a:hover { text-decoration: underline; }
 .grid { display: grid; gap: 22px; grid-template-columns: 1fr 1fr; }
 .grid p { margin: 0; color: var(--muted); }
 
+.contact { margin-top: 18px; }
+.contact a { font-weight: 600; }
+
 .foot { border-top: 1px solid var(--border); padding: 28px 0; }
 .foot-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 
